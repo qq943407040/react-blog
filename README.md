@@ -13,3 +13,6 @@ ui库使用了antd-design，数据库是mysql
 
 管理端页：
  ![image](https://user-images.githubusercontent.com/58356486/151473432-8772d97c-03ae-4f6a-bb45-f0466e29c537.png)
+
+
+服务器到期暂时无法预览

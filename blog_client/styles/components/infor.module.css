@@ -16,3 +16,11 @@
     margin-left: .5rem;
     margin-right: .5rem;
 }
+.account1{
+    background-color: #999;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+.account1 :hover{
+    cursor: pointer;
+}

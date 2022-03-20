@@ -50,7 +50,11 @@ const Home = (list) => {
       <Row className="comm_main" type="flex" justify="center">
         <Col className="comm_left" xs={24} sm={24} md={16} lg={18} xl={14}  >
           <div>
-            
+            <div className="bread_div">
+              <Breadcrumb>
+                <Breadcrumb.Item><Link href="/">首页</Link></Breadcrumb.Item>
+              </Breadcrumb>
+            </div>
             <List
               header={''}
               itemLayout="vertical"

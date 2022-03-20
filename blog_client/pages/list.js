@@ -14,7 +14,7 @@ import { useEffect } from 'react'
 import {marked} from 'marked'
 import hljs from "highlight.js";
 import 'highlight.js/styles/monokai-sublime.css';
-const ArticleList = ( list ) => {
+const ArticleList = ( list,context ) => {
   const renderer = new marked.Renderer();
   marked.setOptions({
     renderer: renderer,
@@ -37,10 +37,10 @@ const ArticleList = ( list ) => {
     list.data
   )
   useEffect(()=>{
-    console.log(list.data)
-
+    console.log(list)
+    console.log(context)
     setMylist(list.data)
-   })
+   },[list])
   return (
     <>
       <Head>
@@ -53,7 +53,7 @@ const ArticleList = ( list ) => {
           <div className="bread_div">
               <Breadcrumb>
                 <Breadcrumb.Item><Link href="/">首页</Link></Breadcrumb.Item>
-                <Breadcrumb.Item><Link href={{ pathname: '/list', query: { id: list.data[0].id } }}>{list.data[0].typeName}</Link></Breadcrumb.Item>
+                <Breadcrumb.Item>{}</Breadcrumb.Item>
               </Breadcrumb>
             </div>
             <List

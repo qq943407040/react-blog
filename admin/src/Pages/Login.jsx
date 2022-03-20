@@ -9,6 +9,7 @@ function Login(props) {
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
     const [isLoading, setIsLoading] = useState(false)
+    const [list,setList] = useState([])
 
     const checkLogin = ()=>{
         setIsLoading(true)
@@ -45,14 +46,22 @@ function Login(props) {
                 }
            }
         )
+        const promise = new Promise((resolve) => {
 
+            axios("http://rap2api.taobao.org/app/mock/296818/infor").then(
+              (res) => {
+                console.log(res.data)
+                setList(res.data)
+
+              }
+            )
+          })   
         setTimeout(()=>{
             setIsLoading(false)
         },1000)
     }
     return (
         <div className="login-div">
-
             <Spin tip="Loading..." spinning={isLoading}>
                 <Card title="网盘管理系统" bordered={true} style={{ width: 400 }} >
                     <Input

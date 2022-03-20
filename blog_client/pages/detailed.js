@@ -14,19 +14,18 @@ import 'markdown-navbar/dist/navbar.css';
 import { marked } from 'marked';
 import hljs from 'highlight.js'
 import 'highlight.js/styles/monokai-sublime.css';
-import Tocify from './components/tocify.tsx'
 import servicePath from '../config/apiUrl'
 
 
 const Detailed = (props) => {
 
   // const renderer =new marked.Renderer();
-  const tocify = new Tocify()
-  const renderer = new marked.Renderer();
-  renderer.heading = function (text, level, raw) {
-    const anchor = tocify.add(text, level);
-    return `<a id="${anchor}" href="#${anchor}" class="anchor-fix"><h${level}>${text}</h${level}></a>\n`;
-  };
+//   const tocify = new Tocify()
+//   const renderer = new marked.Renderer();
+//   renderer.heading = function (text, level, raw) {
+//     const anchor = tocify.add(text, level);
+//     return `<a id="${anchor}" href="#${anchor}" class="anchor-fix"><h${level}>${text}</h${level}></a>\n`;
+//   };
 
 
   marked.setOptions({
@@ -87,9 +86,7 @@ const Detailed = (props) => {
           <Affix offsetTop={5}>
             <div className="detailed-nav comm_box">
               <div className="nav-title">文章目录</div>
-              <div className="toc-list">
-                {tocify && tocify.render()}
-              </div>
+              
 
             </div>
           </Affix>

@@ -1,12 +1,11 @@
 {
-  "proxy": "http://127.0.0.1:7001",
   "name": "net_disk",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 7002",
     "lint": "next lint"
   },
   "dependencies": {

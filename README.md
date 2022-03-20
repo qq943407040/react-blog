@@ -4,7 +4,7 @@
 
 ui库使用了antd-design，数据库是mysql
 
-目前已成功部署，欢迎大家访问 http://47.107.108.95:7002
+目前已成功部署，欢迎大家访问 http://175.178.183.25:3000/
 目录结构：
 ![image](https://user-images.githubusercontent.com/58356486/152273708-b9b61a60-a7a1-469d-9ae4-360b2a6e5e48.png)
 
